@@ -1,95 +1,36 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import Image from "next/image";
+import styles from "./page.module.css";
+import { Alert } from "@/components/bootstrap";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
+    <div>
+      <Alert>
         <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
+          ini adalah sampel project sederhana untuk memamerkan dan belajar
+          tentang <strong>NEXTJS App Router</strong>{" "}
         </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
+        <ul>
+          <li>Static dan dynamic server-side rendering</li>
+          <li>Incremental static regeneration</li>
+          <li>Client-side rendering</li>
+          <li>Route handlers (API Endpoint)</li>
+          <li>meta-data API</li>
+          <li>dan lain sebagainya</li>
+          <p className="mb-0">
+            setiap halaman menggunakan pendekatan fetching dan caching data yang
+            berbeda, klik link di navbar untuk mencobanya.
           </p>
-        </a>
-      </div>
-    </main>
-  )
+        </ul>
+      </Alert>
+      <Alert variant="secondary">
+        <p>
+          Catatan : untuk memuat data pada situs ini, kamu butuh API Key dari
+          Unsplash dan menambahkannya ke .env.local file dengan nama
+          UNSPLASH_ACCESS_KEY, perlu diperhatikan bahwa free tier unsplash api
+          memiliki batas request yaitu 50 request per jam.
+        </p>
+      </Alert>
+    </div>
+  );
 }
