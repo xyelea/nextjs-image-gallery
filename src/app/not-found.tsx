@@ -9,7 +9,10 @@ export default function notFound({}) {
         <Col xs={12} md={8} lg={6} className="text-center">
           <h2 className="display-1">404</h2>
           <h3 className="display-4 mb-3">Page Not Found</h3>
-          <p>We're sorry, but the page you requested could not be found.</p>
+          <p>
+            We&apos;re sorry, but the page you requested could not be found.
+          </p>
+
           <Button href="/" variant="primary">
             Go Home
           </Button>
